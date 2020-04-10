@@ -1,6 +1,17 @@
-composer.phar
-/vendor/
+#disable temporary and log files and dirs
+log/*
+!/log/.htaccess
 
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
+#disable private local files
+*.local.php
+env_config_private*.php
+
+#disable composer-managed libraries
+/vendor/
+#disable composer lock file
+/composer.lock
+
+#disable IDE files
+/nbproject/private/
+/nbproject/
+/.idea
